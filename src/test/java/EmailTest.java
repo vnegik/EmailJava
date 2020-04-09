@@ -26,7 +26,6 @@ public class EmailTest {
 
     @BeforeClass(dependsOnMethods = "startBrowser", description = "Add implicite wait and maximize window")
     public void addImplicitly() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(START_EMAIL_URL);
     }
