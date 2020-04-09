@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- Use this XML file to run test -->
+
+<suite name="Suite One" >
+<test name="Test One" >
+    <classes>
+        <class name="EmailTest"/>
+    </classes>
+</test>
+</suite>
