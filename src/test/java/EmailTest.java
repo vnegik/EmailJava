@@ -1,5 +1,7 @@
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,6 +30,8 @@ public class EmailTest {
     public void addImplicitly() {
         driver.manage().window().maximize();
         driver.get(START_EMAIL_URL);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
     }
 
     @Test(description = "Login to Email account. Assert, that the login is successful.", priority=1)
