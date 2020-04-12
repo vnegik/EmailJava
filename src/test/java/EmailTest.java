@@ -44,7 +44,7 @@ public class EmailTest {
     @Test(description = "Create new email.", priority=2)
     public void createEmail () {
         new IncomingEmailPage(driver).openNewEmailPage().fillEmailFiels(EMAIL, SUBJECT, BODY);
-        new NewEmailPage(driver).SendEmail();
+        new NewEmailPage(driver).sendEmail();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertTrue(new IncomingEmailPage(driver).incomingEmailPageOpens(), "Incorrect folder opens");
         System.out.println("Email is sent");

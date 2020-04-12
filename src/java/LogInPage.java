@@ -27,7 +27,7 @@ public class LogInPage extends AbstractMailPage {
         super (driver);
     }
 
-    public void LoginIfOnlyLoginFieldIsDisplayed(String login, String password) {
+    public void loginIfOnlyLoginFieldIsDisplayed(String login, String password) {
         System.out.println("Typing user login: " + login);
         waiter.waitingForElement(loginField, locatorForLoginField);
         loginField.clear();
@@ -43,7 +43,7 @@ public class LogInPage extends AbstractMailPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    public void LoginIfLoginAndPasswordFieldsAreDisplayed(String login, String password) {
+    public void loginIfLoginAndPasswordFieldsAreDisplayed(String login, String password) {
         System.out.println("Typing user login: " + login);
         waiter.waitingForElement(loginField, locatorForLoginField);
         loginField.clear();
@@ -67,11 +67,11 @@ public class LogInPage extends AbstractMailPage {
         waiter.waitingForElement(loginField, locatorForLoginField);
         if (submitForm.isDisplayed())
         {
-            LoginIfOnlyLoginFieldIsDisplayed(login, password);
+            loginIfOnlyLoginFieldIsDisplayed(login, password);
         }
         else
         {
-            LoginIfLoginAndPasswordFieldsAreDisplayed(login, password);
+            loginIfLoginAndPasswordFieldsAreDisplayed(login, password);
         }
         return new IncomingEmailPage(driver);
     }

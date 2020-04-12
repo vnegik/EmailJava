@@ -43,7 +43,7 @@ public class NewEmailPage extends AbstractMailPage {
         System.out.println("Subject field have been filed: " + body);
     }
 
-    public IncomingEmailPage SendEmail() {
+    public IncomingEmailPage sendEmail() {
         waiter.waitingForElement(sendButton, locatorForSendButton);
         sendButton.click();
         waiter.waitingForElement(returnToIncomingButton, locatorForReturnToIncomingButton);
