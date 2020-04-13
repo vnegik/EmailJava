@@ -5,9 +5,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
+
+@Listeners(Listener.class)
 
 public class EmailTest {
     private static final String PASSWORD = "voin12wert";
